@@ -30,9 +30,8 @@ public class Vertex {
 		return edges;
 	}
 
-	@Override
-	public String toString() {
-		return String.format("{vertex=%s | edges=%s}", data, edges);
+	public void setEdges(List<Edge> edges) {
+		this.edges = edges;
 	}
 
 }

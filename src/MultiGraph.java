@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class MultiGraph {
 	
@@ -19,13 +20,20 @@ public class MultiGraph {
 	}
 	
 	public void addEdge(Object key, Object data) {
-		//Edge edge = Edge.createNewInstance(data);
+		vertices.get(key).add(Edge.createNewInstance(data));
 	}
 
 	@Override
 	public String toString() {
 		return vertices
 			.keySet()
+			.stream()
+			.collect(
+				Collectors.toMap(
+					k -> k, 
+					v -> vertices.get(v)
+				)
+			)
 			.toString();
 	}
 	
