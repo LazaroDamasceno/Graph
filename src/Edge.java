@@ -9,7 +9,7 @@ public class Edge {
 		this.data = data;
 	}
 	
-	public Edge createNewInstance(Object data) {
+	public static Edge createNewInstance(Object data) {
 		return new Edge(data);
 	}
 	
@@ -37,19 +37,5 @@ public class Edge {
 		this.isDirected = isDirected;
 	}
 
-	public Object getData() {
-		return data;
-	}
-
-	/*
-	public void setData(Object data) {
-		this.data = data;
-	}
-	*/
-
-	@Override
-	public String toString() {
-		return String.format("%s", data);
-	}
 
 }
