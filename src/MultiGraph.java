@@ -32,7 +32,9 @@ public class MultiGraph {
 	}
 
 	public void removeEdgeByIndex(Object key, int index) {
-		vertices.get(key).remove(index);
+		if (!vertices.get(key).isEmpty()) {
+			vertices.get(key).remove(index);
+		}
 	}
 
 	@Override
