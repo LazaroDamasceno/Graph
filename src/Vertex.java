@@ -2,11 +2,9 @@ import java.util.*;
 
 public class Vertex {
 	
-	private Object data;
 	private List<Edge> edges;
 	
 	private Vertex(Object data) {
-		this.data = data;
 		edges = new ArrayList<>();
 	}
 	
