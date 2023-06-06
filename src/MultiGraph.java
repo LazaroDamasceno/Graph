@@ -54,13 +54,9 @@ public class MultiGraph {
 	* Replacement methods
 	*/
 
-	public void replaceVertex() {
-
-	}
-
-	public void replaceEdge() {
-
-	}
+	public void replaceVertex() {}
+	
+	public void replaceEdge() {}
 
 	/*
 	 * Getting methods
