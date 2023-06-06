@@ -49,8 +49,8 @@ public class MultiGraph {
 			.stream()
 			.collect(
 				Collectors.toMap(
-					k -> k, 
-					v -> vertices.get(v)
+					key -> key, 
+					value -> vertices.get(value)
 			))
 			.toString();
 	}
