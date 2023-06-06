@@ -13,6 +13,10 @@ public class MultiGraph {
 	public static MultiGraph createNewInstance() {
 		return new MultiGraph();
 	}
+
+	/*
+	 * Adding methods
+	 */
 	
 	public void addVertex(Object data) {
 		vertex = Vertex.createNewInstance(data); 
@@ -22,6 +26,10 @@ public class MultiGraph {
 	public void addEdge(Object key, Object data) {
 		vertices.get(key).add(Edge.createNewInstance(data));
 	}
+
+	/*
+	 * Revoming methods
+	 */
 
 	public void removeVertex(Object key) {
 		vertices.remove(key);
@@ -41,6 +49,23 @@ public class MultiGraph {
 			vertices.get(key).remove(index);
 		}
 	}
+
+	/*
+	* Replacement methods
+	*/
+
+	public void replaceVertex(Object key, Object newKey) {
+		
+	}
+
+	public void replaceEdge(Object key, Object data) {
+		
+	}
+
+
+	/*
+	 * Prining methods
+	 */
 
 	@Override
 	public String toString() {
