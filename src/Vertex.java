@@ -34,4 +34,9 @@ public class Vertex {
 		this.edges = edges;
 	}
 
+	@Override
+	public String toString() {
+		return edges.toString();
+	}
+
 }

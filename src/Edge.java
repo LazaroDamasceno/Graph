@@ -36,5 +36,10 @@ public class Edge {
 	public void setIsDirected(Boolean isDirected) {
 		this.isDirected = isDirected;
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("%s", data);
+	}
 
 }
