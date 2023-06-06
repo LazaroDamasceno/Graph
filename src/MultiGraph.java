@@ -23,6 +23,18 @@ public class MultiGraph {
 		vertices.get(key).add(Edge.createNewInstance(data));
 	}
 
+	public void removeVertex(Object key) {
+		vertices.remove(key);
+	}
+
+	public void removeEdgeByObject(Object key, Object data) {
+		vertices.get(key).remove(data);
+	}
+
+	public void removeEdgeByIndex(Object key, int index) {
+		vertices.get(key).remove(index);
+	}
+
 	@Override
 	public String toString() {
 		return vertices
