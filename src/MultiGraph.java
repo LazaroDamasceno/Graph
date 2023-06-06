@@ -1,38 +1,34 @@
-
 import java.util.List;
-import java.util.ArrayList;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.Collection;
+import java.util.HashMap;
 
 public class MultiGraph {
 	
-	private List<Vertex> vertices;
+	private Map<Object, List<Edge>> vertices;
 	private Vertex vertex;
-	private Edge edge;
 	
 	private MultiGraph() {
-		this.vertices = new ArrayList<>();
+		this.vertices = new HashMap<>();
+	}
+	
+	public static MultiGraph createNewInstance() {
+		return new MultiGraph();
 	}
 	
 	public void addVertex(Object data) {
-		vertices.add(createNewVertexInstance(data));
+		vertex = Vertex.createNewInstance(data); 
+		vertices.put(data, vertex.getEdges());
 	}
 	
-	private Vertex createNewVertexInstance(Object data) {
-		return vertex.createNewInstance(data);
-	}
-	
-	public void addEdge(int index, Object data) {
-		vertices.get(index).add(createNewEdgeInstance(index, data));
-	}
-	
-	private Edge createNewEdgeInstance(int index, Object data) {
-		return edge.createNewInstance(data);
+	public void addEdge(Object key, Object data) {
+		Edge edge = Edge.createNewInstance(data);
 	}
 
 	@Override
 	public String toString() {
-		return null;
+		return vertices.keySet().stream().collect(Collectors.toMap(k -> k, v -> v.));
 	}
-	
-	
 	
 }
