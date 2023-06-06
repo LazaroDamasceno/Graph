@@ -19,8 +19,7 @@ public class MultiGraph {
 	 */
 	
 	public void addVertex(Object data) {
-		vertex = Vertex.createNewInstance(data); 
-		vertices.put(data, vertex.getEdges());
+		vertices.put(data, Vertex.createNewInstance(data).getEdges());
 	}
 	
 	public void addEdge(Object key, Object data) {
