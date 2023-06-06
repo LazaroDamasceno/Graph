@@ -23,12 +23,14 @@ public class MultiGraph {
 	}
 	
 	public void addEdge(Object key, Object data) {
-		Edge edge = Edge.createNewInstance(data);
+		//Edge edge = Edge.createNewInstance(data);
 	}
 
 	@Override
 	public String toString() {
-		return vertices.keySet().stream().collect(Collectors.toMap(k -> k, v -> v.));
+		return vertices
+			.keySet()
+			.toString();
 	}
 	
 }

@@ -15,8 +15,8 @@ public class Vertex {
 		return new Vertex(data);
 	}
 	
-	public void add(Edge input) {
-		edges.add(input);
+	public void add(Object data) {
+		edges.add(Edge.createNewInstance(data));
 	}
 	
 	public void remove(Edge input) {
