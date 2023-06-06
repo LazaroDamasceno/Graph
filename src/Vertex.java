@@ -22,16 +22,8 @@ public class Vertex {
 		edges.remove(input);
 	}
 	
-	public Object getData() {
-		return data;
-	}
-
 	public List<Edge> getEdges() {
 		return edges;
-	}
-
-	public void setEdges(List<Edge> edges) {
-		this.edges = edges;
 	}
 
 	@Override

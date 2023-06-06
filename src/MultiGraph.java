@@ -28,8 +28,8 @@ public class MultiGraph {
 	}
 
 	public void removeLastEdge(Object key) {
-		int firstIndex = vertices.size()-1;
-		vertices.get(key).remove(firstIndex);
+		int lastIndex = vertices.size()-1;
+		vertices.get(key).remove(lastIndex);
 	}
 
 	public void removeFirstEdge(Object key) {
