@@ -4,7 +4,6 @@ import java.util.stream.Collectors;
 public class MultiGraph {
 	
 	private Map<Object, List<Edge>> vertices;
-	private Vertex vertex;
 	
 	private MultiGraph() {
 		this.vertices = new HashMap<>();
