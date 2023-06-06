@@ -37,5 +37,4 @@ public class Edge {
 		this.isDirected = isDirected;
 	}
 
-
 }
