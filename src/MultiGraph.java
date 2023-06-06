@@ -27,12 +27,17 @@ public class MultiGraph {
 		vertices.remove(key);
 	}
 
-	public void removeEdgeByObject(Object key, Object data) {
-		vertices.get(key).remove(data);
+	public void removeLastEdge(Object key) {
+		int firstIndex = vertices.size()-1;
+		vertices.get(key).remove(firstIndex);
+	}
+
+	public void removeFirstEdge(Object key) {
+		vertices.get(key).remove(0);
 	}
 
 	public void removeEdgeByIndex(Object key, int index) {
-		if (!vertices.get(key).isEmpty()) {
+		if (!vertices.get(key).isEmpty() || vertices.containsKey(key)) {
 			vertices.get(key).remove(index);
 		}
 	}
