@@ -46,8 +46,7 @@ public class MultiGraph {
 				Collectors.toMap(
 					k -> k, 
 					v -> vertices.get(v)
-				)
-			)
+			))
 			.toString();
 	}
 	
