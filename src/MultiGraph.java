@@ -54,9 +54,19 @@ public class MultiGraph {
 	* Replacement methods
 	*/
 
-	public void replaceVertex() {}
+	private void replace(Object key, List<Edge> edges) {
+		vertices.replace(key, edges);
+	}
+
+	public void replaceVertex(Object oldKey, Object newKey) {
+		addVertex(newKey);
+		replace(newKey, vertices.get(oldKey));
+		removeVertex(oldKey);
+	}
 	
-	public void replaceEdge() {}
+	public void replaceEdge(Object key, Object newData) {
+		
+	}
 
 	/*
 	 * Getting methods
