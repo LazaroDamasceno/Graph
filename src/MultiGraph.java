@@ -44,9 +44,7 @@ public class MultiGraph {
 	}
 
 	public void removeEdgeByIndex(Object key, int index) {
-		if (!vertices.get(key).isEmpty() || vertices.containsKey(key)) {
-			vertices.get(key).remove(index);
-		}
+		vertices.get(key).remove(index);
 	}
 
 	/*
