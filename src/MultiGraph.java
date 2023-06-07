@@ -54,7 +54,7 @@ public class MultiGraph {
 		vertices.replace(key, edges);
 	}
 
-	public void replaceVertex(Object key, Edge data, Object newKey) {
+	public void replaceVertex(Object key, Object newKey) {
 		addVertex(newKey);
 		replaceValue(newKey, vertices.get(key));
 		removeVertex(key);

@@ -11,7 +11,9 @@ public class Main {
 		graph.addEdge(3, 5000);
 		graph.addEdge(3, 6000);
 		System.out.println(graph);
-		graph.replaceEdge(1, 0,"A");
+		graph.replaceVertex(1, 10);
+		System.out.println(graph);
+		graph.replaceEdge(10, 0,"A");
 		System.out.println(graph);
 		
 	}
