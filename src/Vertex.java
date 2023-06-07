@@ -5,7 +5,7 @@ public class Vertex {
 	private List<Edge> edges;
 	
 	private Vertex(Object data) {
-		this.edges = new ArrayList<>();
+		edges = new ArrayList<>();
 	}
 	
 	public static Vertex createNewInstance(Object data) {

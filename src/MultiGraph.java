@@ -4,6 +4,7 @@ import java.util.stream.Collectors;
 public class MultiGraph {
 	
 	private Map<Object, List<Edge>> vertices;
+	private Vertex vertex;
 	
 	private MultiGraph() {
 		this.vertices = new HashMap<>();
@@ -50,17 +51,19 @@ public class MultiGraph {
 	* Replacement methods
 	*/
 
-	private void replace(Object key, List<Edge> edges) {
+	private void replaceValue(Object key, List<Edge> edges) {
 		vertices.replace(key, edges);
 	}
 
-	public void replaceVertex(Object key, Object newKey) {
+	public void replaceVertex(Object key, Edge data, Object newKey) {
 		addVertex(newKey);
-		replace(newKey, vertices.get(key));
+		replaceValue(newKey, vertices.get(key));
 		removeVertex(key);
 	}
 	
-	public void replaceEdge(Object key, Object data, Object newData) {}
+	public void replaceEdge(Object key, int index, Object newData) {
+		vertices.get(key).set(index, Edge.createNewInstance(newData));
+	}
 
 	/*
 	 * Getting methods
