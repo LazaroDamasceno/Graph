@@ -13,9 +13,9 @@ public class MultiGraph {
 		return new MultiGraph();
 	}
 
-	/*
+	/*****************************************************
 	 * Adding methods
-	 */
+	*****************************************************/
 	
 	public void addVertex(Object data) {
 		vertices.put(data, Vertex.createNewInstance(data).getEdges());
@@ -25,9 +25,9 @@ public class MultiGraph {
 		vertices.get(key).add(Edge.createNewInstance(data));
 	}
 
-	/*
+	/*****************************************************
 	 * Revoming methods
-	 */
+	*****************************************************/
 
 	public void removeVertex(Object key) {
 		vertices.remove(key);
