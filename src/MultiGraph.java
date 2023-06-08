@@ -61,7 +61,7 @@ public class MultiGraph {
 	}
 	
 	public void replaceEdge(Object key, int index, Object newData) {
-		vertices.get(key).set(index, Edge.createNewInstance(newData));
+		vertices.get(key).get(index).setData(newData);
 	}
 
 	/*
