@@ -46,9 +46,9 @@ public class MultiGraph {
 		vertices.get(key).remove(index);
 	}
 
-	/*
+	/*********************************************************
 	* Replacement methods
-	*/
+	*********************************************************/
 
 	private void replaceValue(Object key, List<Edge> edges) {
 		vertices.replace(key, edges);
@@ -64,9 +64,9 @@ public class MultiGraph {
 		vertices.get(key).get(index).setData(newData);
 	}
 
-	/*
+	/*****************************************************************
 	 * Getting methods
-	 */
+	****************************************************************/
 
 	public Set<Object> getAllVertices() {
 		return vertices.keySet();
@@ -80,9 +80,9 @@ public class MultiGraph {
 			.collect(Collectors.toList());
 	}
 
-	/*
+	/*****************************************************************
 	 * Prining methods
-	 */
+	*****************************************************************/
 
 	@Override
 	public String toString() {
