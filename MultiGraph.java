@@ -2,23 +2,23 @@ import java.util.List;
 
 public class MultiGraph {
 	
-	private List<Vertex> v;
-	private List<Edge> e;
+	private List<Vertex> vertices;
+	private List<Edge> edges;
 	
 	public List<Vertex> getV() {
-		return v;
+		return vertices;
 	}
 
-	public void setV(List<Vertex> v) {
-		this.v = v;
+	public void setV(List<Vertex> vertices) {
+		this.vertices = vertices;
 	}
 
 	public List<Edge> getE() {
-		return e;
+		return edges;
 	}
 
-	public void setE(List<Edge> e) {
-		this.e = e;
+	public void setE(List<Edge> edges) {
+		this.edges = edges;
 	}
 	
 }
