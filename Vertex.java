@@ -12,6 +12,10 @@ public class Vertex {
 		return edges;
 	}
 
+	public void setEdges(List<Edge> edges) {
+		this.edges = edges;
+	}
+
 	@Override
 	public String toString() {
 		return edges.toString();
