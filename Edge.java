@@ -5,12 +5,12 @@ public class Edge {
 	private Boolean isDirected;
 	private Object data;
 
-	public Edge(Object data, Object dataFirstVertex, Object dataSecondVertex) {
+	public Edge(Object data, Vertex firstVertex, Vertex secondVertex) {
 		this.data = data;
-		this.firstVertex = new Vertex(dataFirstVertex);
-		this.secondVertex = new Vertex(dataSecondVertex);
+		this.firstVertex = firstVertex;
+		this.secondVertex = secondVertex;
 	}
-	
+
 	public Vertex getFirstVertex() {
 		return firstVertex;
 	}
