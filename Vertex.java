@@ -11,11 +11,11 @@ public class Vertex {
 	}
 
 	public void add(Edge edge) {
-
+		edges.add(edge);
 	}
 
-	public void remove(Object data) {
-
+	public void remove(Edge edge) {
+		edges.remove(edge);
 	}
 
 	public List<Edge> getEdges() {
