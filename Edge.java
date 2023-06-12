@@ -6,11 +6,10 @@ public class Edge {
 	private Object data;
 	private Vertex vertex;
 
-	public Edge(Vertex firstVertex, Vertex secondVertex, Boolean isDirected, Object data, Object firstVertexVData, Object secondVertexVData) {
-		this.firstVertex = vertex;
-		this.secondVertex = secondVertex;
+	public Edge(Object data, Object firstVertexVData, Object secondVertexVData) {
 		this.data = data;
-		
+		this.firstVertex = new Vertex(firstVertexVData);
+		this.secondVertex = new Vertex(secondVertexVData);
 	}
 
 	public Object getData() {
