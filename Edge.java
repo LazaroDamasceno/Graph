@@ -1,14 +1,18 @@
 public class Edge {
 	
 	private Vertex firstVertex;
-	private Vertex secondtVertex;
+	private Vertex secondVertex;
 	private Boolean isDirected;
 	private Object data;
-	
-	public Edge(Object data) {
+	private Vertex vertex;
+
+	public Edge(Vertex firstVertex, Vertex secondVertex, Boolean isDirected, Object data, Object firstVertexVData, Object secondVertexVData) {
+		this.firstVertex = vertex;
+		this.secondVertex = secondVertex;
 		this.data = data;
+		
 	}
-	
+
 	public Object getData() {
 		return data;
 	}
