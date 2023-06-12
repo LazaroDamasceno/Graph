@@ -13,9 +13,9 @@ public class MultiGraph {
 		return new MultiGraph();
 	}
 
-	/*****************************************************
+	/*
 	 * Adding methods
-	*****************************************************/
+	 */
 	
 	public void addVertex(Object data) {
 		vertices.put(data, Vertex.createNewInstance(data).getEdges());
@@ -25,9 +25,9 @@ public class MultiGraph {
 		vertices.get(key).add(Edge.createNewInstance(data));
 	}
 
-	/*****************************************************
+	/*
 	 * Revoming methods
-	*****************************************************/
+	 */
 
 	public void removeVertex(Object key) {
 		vertices.remove(key);
@@ -46,9 +46,9 @@ public class MultiGraph {
 		vertices.get(key).remove(index);
 	}
 
-	/*********************************************************
+	/*
 	* Replacement methods
-	*********************************************************/
+	*/
 
 	private void replaceValue(Object key, List<Edge> edges) {
 		vertices.replace(key, edges);
@@ -60,13 +60,14 @@ public class MultiGraph {
 		removeVertex(key);
 	}
 	
-	public void replaceEdge(Object key, int index, Object newData) {
-		vertices.get(key).get(index).setData(newData);
+	int index;
+	public void replaceEdge(Object key, Object data, Object newData) {
+		vertices.get(key).set(index, Edge.createNewInstance(newData));
 	}
 
-	/*****************************************************************
+	/*
 	 * Getting methods
-	****************************************************************/
+	 */
 
 	public Set<Object> getAllVertices() {
 		return vertices.keySet();
@@ -80,9 +81,9 @@ public class MultiGraph {
 			.collect(Collectors.toList());
 	}
 
-	/*****************************************************************
+	/*
 	 * Prining methods
-	*****************************************************************/
+	 */
 
 	@Override
 	public String toString() {
