@@ -5,12 +5,8 @@ public class Edge {
 	private Boolean isDirected;
 	private Object data;
 	
-	private Edge(Object data) {
+	public Edge(Object data) {
 		this.data = data;
-	}
-	
-	public static Edge createNewInstance(Object data) {
-		return new Edge(data);
 	}
 	
 	public Object getData() {
