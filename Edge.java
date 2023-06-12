@@ -13,6 +13,14 @@ public class Edge {
 		return new Edge(data);
 	}
 	
+	public Object getData() {
+		return data;
+	}
+
+	public void setData(Object data) {
+		this.data = data;
+	}
+
 	public Vertex getFirstVertex() {
 		return firstVertex;
 	}
@@ -37,14 +45,6 @@ public class Edge {
 		this.isDirected = isDirected;
 	}
 	
-	public Object getData() {
-		return data;
-	}
-
-	public void setData(Object data) {
-		this.data = data;
-	}
-
 	@Override
 	public String toString() {
 		return String.format("%s", data);
