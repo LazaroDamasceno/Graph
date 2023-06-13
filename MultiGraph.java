@@ -5,11 +5,11 @@ public class MultiGraph {
 	private List<Vertex> vertices;
 	private List<Edge> edges;
 	
-	public getVertices() {
+	public List<Vertex> getVertices() {
 		return vertices;
 	}
 
-	public getEdges() {
+	public List<Edge> getEdges() {
 		return edges;
 	}
 
