@@ -5,20 +5,21 @@ public class MultiGraph {
 	private List<Vertex> vertices;
 	private List<Edge> edges;
 	
-	public List<Vertex> getV() {
+	public getVertices() {
 		return vertices;
 	}
 
-	public void setV(List<Vertex> vertices) {
-		this.vertices = vertices;
-	}
-
-	public List<Edge> getE() {
+	public getEdges() {
 		return edges;
 	}
 
-	public void setE(List<Edge> edges) {
+	public void setVertices(List<Vertex> vertices) {
+		this.vertices = vertices;
+	}
+
+	public void setEdges(List<Edge> edges) {
 		this.edges = edges;
 	}
+
 	
 }
