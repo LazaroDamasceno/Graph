@@ -20,6 +20,5 @@ public class MultiGraph {
 	public void setEdges(List<Edge> edges) {
 		this.edges = edges;
 	}
-
 	
 }
