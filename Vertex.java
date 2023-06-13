@@ -37,7 +37,7 @@ public class Vertex {
 
 	@Override
 	public String toString() {
-		return edges.toString();
+		return String.format("%s: %s", data, edges);
 	}
 
 }
