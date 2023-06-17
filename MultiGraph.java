@@ -11,14 +11,6 @@ public class MultiGraph {
 		edges = new ArrayList<>();
 	}
 
-	public void addVertex(Vertex vertex) {
-		vertices.add(vertex);
-	}
-
-	public void addEdge(Edge edge) {
-		edges.add(edge);
-	}
-
 	public List<Vertex> getVertices() {
 		return vertices;
 	}
@@ -38,7 +30,7 @@ public class MultiGraph {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		for (var obj : edges) {
+		for (var obj : getEdges()) {
 			sb.append("----------------");
 			sb.append("v1");
 			sb.append(obj.getFirstVertex());
