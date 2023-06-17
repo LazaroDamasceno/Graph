@@ -45,7 +45,7 @@ public class Edge {
 
 	@Override
 	public String toString() {
-		return String.format("[%s (%s, %s)]", data, firstVertex, secondVertex);
+		return String.format("[%s (%s, %s)]", data, firstVertex.getData(), secondVertex.getData());
 	}
 
 }
