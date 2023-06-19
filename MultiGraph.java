@@ -23,6 +23,21 @@ public class MultiGraph {
 		return edge;
 	}
 
+	public void removeVertex(Vertex vertex) {
+		vertices.remove(vertex);
+		for (int index = 0; index < edges.size(); index++) {
+			if (edges.get(index).getFirstVertex().equals(vertex) || edges.get(index).getSecondVertex().equals(vertex)) {
+				edges.remove(index);
+			}
+		}
+		//edges.stream().findAny()
+		
+	}
+
+	public void removeEdge() {
+
+	}
+
 	public List<Vertex> getVertices() {
 		return vertices;
 	}
@@ -43,11 +58,12 @@ public class MultiGraph {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		for (var obj : getEdges()) {
-			sb.append(obj.getFirstVertex());
+			sb.append(obj.getFirstVertex().getData());
 			sb.append(" ------ ");
 			sb.append(obj.getData().toString());
 			sb.append(" ------ ");
-			sb.append(obj.getSecondVertex());
+			sb.append(obj.getSecondVertex().getData());
+			sb.append("\n");
 		}
 		return sb.toString();
 	}
