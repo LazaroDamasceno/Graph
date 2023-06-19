@@ -25,11 +25,15 @@ public class MultiGraph {
 
 	public void removeVertex(Vertex vertex) {
 		vertices.remove(vertex);
-		for (int index = 0; index < edges.size(); index++) {
+		/*for (int index = 0; index < edges.size(); index++) {
 			if (edges.get(index).getFirstVertex().equals(vertex) || edges.get(index).getSecondVertex().equals(vertex)) {
 				edges.remove(index);
 			}
-		}
+		}*/
+		edges
+			.stream()
+			.filter(e -> e.getFirstVertex().equals(vertex) || e.getSecondVertex().equals(vertex))
+			removeEdge();
 	}
 
 	public void removeEdge() {
