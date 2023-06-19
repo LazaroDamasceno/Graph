@@ -11,6 +11,18 @@ public class MultiGraph {
 		edges = new ArrayList<>();
 	}
 
+	public Vertex addVertex(Object data) {
+		Vertex vertex = new Vertex(data);
+		vertices.add(vertex);
+		return vertex;
+	}
+
+	public Edge addEdge(Object data, Vertex v1, Vertex v2) {
+		Edge edge = new Edge(data, v1, v2);
+		edges.add(edge);
+		return edge;
+	}
+
 	public List<Vertex> getVertices() {
 		return vertices;
 	}
@@ -31,14 +43,11 @@ public class MultiGraph {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		for (var obj : getEdges()) {
-			sb.append("----------------");
-			sb.append("v1");
 			sb.append(obj.getFirstVertex());
 			sb.append(" ------ ");
 			sb.append(obj.getData().toString());
 			sb.append(" ------ ");
 			sb.append(obj.getSecondVertex());
-			sb.append("----------------\n");
 		}
 		return sb.toString();
 	}
