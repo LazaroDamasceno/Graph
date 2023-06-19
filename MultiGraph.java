@@ -30,8 +30,6 @@ public class MultiGraph {
 				edges.remove(index);
 			}
 		}
-		//edges.stream().findAny()
-		
 	}
 
 	public void removeEdge() {
