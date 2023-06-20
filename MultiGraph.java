@@ -1,3 +1,4 @@
+import java.rmi.server.RemoteRef;
 import java.util.*;
 import java.util.stream.*;
 
@@ -57,6 +58,10 @@ public class MultiGraph {
 			.map(e -> e.getFirstVertex().equals(v1) && e.getSecondVertex().equals(v2))
 			.toList()
 			.contains(true);
+	}
+
+	public List<Edge> getEdgesOf(Vertex vertex) {
+		return vertex.getEdges();
 	}
 
 	public List<Vertex> getVertices() {

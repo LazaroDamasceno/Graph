@@ -37,7 +37,8 @@ public class Main {
 		//System.out.println(mg);
 		//////////////
 		System.out.println(mg.isAdjacent(v1, v4));
-
+		// Imprimir todas as areastas de um dado vertice
+		System.out.println(mg.getEdgesOf(v1));
  	}
 
 }
