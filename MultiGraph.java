@@ -33,8 +33,7 @@ public class MultiGraph {
 	}
 
 	public void removeEdge(Edge edge) {
-		int index = edges.indexOf(edge);
-		edges.get(index).setData(null);
+		edges.remove(edge);
 		for (Vertex vertex : getVertices()) {
 			if (vertex.getEdges().contains(edge)) {
 				vertex.getEdges().remove(edge);
