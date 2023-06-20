@@ -33,7 +33,14 @@ public class MultiGraph {
 	}
 
 	public void removeEdge(Edge edge) {
-		edges.remove(edge);
+		int index = edges.indexOf(edge);
+		//edges.get(index).setData(null);
+		for (Vertex vertex : getVertices()) {
+			if (vertex.getEdges().contains(edge)) {
+				vertex.getEdges().remove(edge);
+				break;
+			}
+		}
 	}
 
 	public List<Vertex> getVertices() {
@@ -58,7 +65,7 @@ public class MultiGraph {
 		for (var obj : getEdges()) {
 			sb.append(obj.getFirstVertex().getData());
 			sb.append(" ------ ");
-			sb.append(obj.getData().toString());
+			sb.append(obj.getData());
 			sb.append(" ------ ");
 			sb.append(obj.getSecondVertex().getData());
 			sb.append("\n");
