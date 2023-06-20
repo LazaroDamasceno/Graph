@@ -32,8 +32,8 @@ public class MultiGraph {
 		edges.removeAll(removable);
 	}
 
-	public void removeEdge() {
-
+	public void removeEdge(Edge edge) {
+		edges.stream().filter(e -> e.equals(edge));
 	}
 
 	public List<Vertex> getVertices() {
