@@ -51,6 +51,10 @@ public class MultiGraph {
 		edge.setData(data);
 	}
 
+	public boolean isAdjacent(Vertex v1, Vertex v2) {
+		return Boolean.FALSE;
+	}
+
 	public List<Vertex> getVertices() {
 		return vertices;
 	}

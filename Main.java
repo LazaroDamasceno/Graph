@@ -33,6 +33,8 @@ public class Main {
 		mg.replaceEdge(e3, 66);
 		System.out.println(mg);
 
+		System.out.println(B);
+
  	}
 
 }
