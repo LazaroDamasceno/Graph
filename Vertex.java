@@ -19,6 +19,10 @@ public class Vertex {
 		edges.remove(edge);
 	}
 
+	public boolean contains(Edge edge) {
+		return edges.contains(edge);
+	}
+
 	public Object getData() {
 		return data;
 	}

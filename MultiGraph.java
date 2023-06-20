@@ -52,7 +52,7 @@ public class MultiGraph {
 	}
 
 	public boolean isAdjacent(Vertex v1, Vertex v2) {
-		return v1.get
+		
 	}
 
 	public List<Vertex> getVertices() {
