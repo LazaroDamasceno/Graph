@@ -24,6 +24,9 @@ public class Main {
 		mg.removeEdge(e1);
 		System.out.println(mg);
 
+		mg.removeVertex(A);
+		System.out.println(mg);
+
  	}
 
 }
