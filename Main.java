@@ -35,7 +35,7 @@ public class Main {
 		// Substitui arresta
 		//mg.replaceDataEdge(e3, 33);
 		//System.out.println(mg);
-		//////////////
+		// É adjacente
 		System.out.println(mg.isAdjacent(v1, v4));
 		// Imprimir todas as areastas de um dado vertice
 		System.out.println(mg.getEdgesOf(v1));
