@@ -51,7 +51,7 @@ public class MultiGraph {
 		edge.setData(data);
 	}
 
-	public boolean isAdjacent(Vertex v1, Vertex v2) {
+	public void /*boolean*/ isAdjacent(Vertex v1, Vertex v2) {
 		
 	}
 
