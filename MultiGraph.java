@@ -28,7 +28,7 @@ public class MultiGraph {
 		List<Edge> removable = edges
 			.stream()
 			.filter(e -> e.getFirstVertex().equals(vertex) 
-			|| e.getSecondVertex().equals(vertex))
+				|| e.getSecondVertex().equals(vertex))
 			.toList();
 		edges.removeAll(removable);
 	}
