@@ -51,11 +51,12 @@ public class MultiGraph {
 		edge.setData(data);
 	}
 
-	public void /*boolean*/ isAdjacent(Vertex v1, Vertex v2) {
-		var l = Stream.of(edges
+	public boolean isAdjacent(Vertex v1, Vertex v2) {
+		return edges
 			.stream()
-			.map(e -> e.getFirstVertex().equals(v1) && e.getSecondVertex().equals(v2)));
-		System.out.println(l);
+			.map(e -> e.getFirstVertex().equals(v1) && e.getSecondVertex().equals(v2))
+			.toList()
+			.get(0);
 	}
 
 	public List<Vertex> getVertices() {
