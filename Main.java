@@ -8,13 +8,10 @@ public class Main {
 		var e1 = mg.addEdge(1, A, B);
 		A.add(e1);
 		B.add(e1);
-
 		var C = mg.addVertex("C");
 		var e2 = mg.addEdge(2, A, C);
 		A.add(e2);
 		C.add(e2);
-		System.out.println(mg);
-
 		var D = mg.addVertex("D");
 		var e3 = mg.addEdge(3, B, D);
 		B.add(e3);
@@ -23,6 +20,12 @@ public class Main {
 
 		mg.removeVertex(A);
 		System.out.println(mg);
+
+		System.out.println(A);
+		System.out.println(B);
+		System.out.println(C);
+		System.out.println(D);
+
  	}
 
 }
