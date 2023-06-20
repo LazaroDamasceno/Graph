@@ -30,10 +30,11 @@ public class Main {
 		mg.replaceVertix(B, "F");
 		System.out.println(mg);
 		// Substitui arresta
-		mg.replaceEdge(e3, 66);
+		mg.replaceEdge(e3, 33);
 		System.out.println(mg);
-
-		System.out.println(B);
+		// Mostrando os grafos
+		System.out.println(B.getEdges());
+		System.out.println(D.getEdges());
 
  	}
 
