@@ -26,14 +26,13 @@ public class Main {
 		mg.removeVertex(A);
 		System.out.println(mg);
 		// Substitui vertice
-		mg.replaceVertix(B, "F");
+		mg.replaceDataVertix(B, "F");
 		System.out.println(mg);
 		// Substitui arresta
-		mg.replaceEdge(e3, 33);
+		mg.replaceDataEdge(e3, 33);
 		System.out.println(mg);
 		// Mostrando os grafos
-		System.out.println(B.getEdges());
-		System.out.println(D.getEdges());
+		mg.isAdjacent(null, null);
 
  	}
 

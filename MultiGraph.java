@@ -43,16 +43,20 @@ public class MultiGraph {
 		}
 	}
 
-	public void replaceVertix(Vertex vertex, Object data) {
+	public void replaceDataVertix(Vertex vertex, Object data) {
 		vertex.setData(data);
 	}
 
-	public void replaceEdge(Edge edge, Object data) {
+	public void replaceDataEdge(Edge edge, Object data) {
 		edge.setData(data);
 	}
 
 	public void /*boolean*/ isAdjacent(Vertex v1, Vertex v2) {
-		
+		var l = edges
+			.stream()
+			.filter(e -> e.getFirstVertex().equals(v1) && e.getSecondVertex().equals(v2))
+			.toList();
+		System.out.println(l);
 	}
 
 	public List<Vertex> getVertices() {
