@@ -18,21 +18,25 @@ public class Main {
 		var e3 = mg.addEdge(3, v2, v4);
 		v2.add(e3);
 		v4.add(e3);
-		System.out.println(mg);
+		var v5 = mg.addVertex("E");
+		var e4 = mg.addEdge(4, v4, v5);
+		v4.add(e4);
+		v5.add(e4);
+		//System.out.println(mg);
 		// Remove arresta
-		mg.removeEdge(e1);
-		System.out.println(mg);
+		//mg.removeEdge(e1);
+		//System.out.println(mg);
 		// Remove vertice
-		mg.removeVertex(v1);
+		//mg.removeVertex(v1);
 		System.out.println(mg);
 		// Substitui vertice
-		mg.replaceDataVertix(v2, "F");
-		System.out.println(mg);
+		//mg.replaceDataVertix(v2, "F");
+		//System.out.println(mg);
 		// Substitui arresta
-		mg.replaceDataEdge(e3, 33);
-		System.out.println(mg);
+		//mg.replaceDataEdge(e3, 33);
+		//System.out.println(mg);
 		//////////////
-		mg.isAdjacent(v2, v4);
+		System.out.println(mg.isAdjacent(v1, v4));
 
  	}
 

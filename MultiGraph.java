@@ -56,7 +56,7 @@ public class MultiGraph {
 			.stream()
 			.map(e -> e.getFirstVertex().equals(v1) && e.getSecondVertex().equals(v2))
 			.toList()
-			.get(0);
+			.contains(true);
 	}
 
 	public List<Vertex> getVertices() {
