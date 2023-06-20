@@ -2,7 +2,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		MultiGraph mg = new MultiGraph();
-
 		// Primeiras adições
 		var A = mg.addVertex("A");
 		var B = mg.addVertex("B");
