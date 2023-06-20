@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class MultiGraph {
 	
@@ -54,7 +55,7 @@ public class MultiGraph {
 		return edges
 			.stream()
 			.map(e -> e.getFirstVertex().equals(v1) && e.getSecondVertex().equals(v2))
-			.toList()
+			.collect(Collectors.toSet())
 			.contains(true);
 	}
 
@@ -83,9 +84,9 @@ public class MultiGraph {
 		StringBuilder sb = new StringBuilder();
 		for (var obj : getEdges()) {
 			sb.append(obj.getFirstVertex().getData());
-			sb.append(" ------ ");
+			sb.append(" --- ");
 			sb.append(obj.getData());
-			sb.append(" ------ ");
+			sb.append(" --- ");
 			sb.append(obj.getSecondVertex().getData());
 			sb.append("\n");
 		}
