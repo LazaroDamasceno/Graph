@@ -31,7 +31,7 @@ public class Main {
 		// Substitui arresta
 		mg.replaceDataEdge(e3, 33);
 		System.out.println(mg);
-		// Mostrando os grafos
+		//////////////
 		mg.isAdjacent(v2, v4);
 
  	}

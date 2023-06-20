@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.*;
 
 public class MultiGraph {
 	
@@ -52,10 +52,9 @@ public class MultiGraph {
 	}
 
 	public void /*boolean*/ isAdjacent(Vertex v1, Vertex v2) {
-		var l = edges
+		var l = Stream.of(edges
 			.stream()
-			.filter(e -> e.getFirstVertex().equals(v1) && e.getSecondVertex().equals(v2))
-			.toList();
+			.map(e -> e.getFirstVertex().equals(v1) && e.getSecondVertex().equals(v2)));
 		System.out.println(l);
 	}
 
