@@ -20,11 +20,17 @@ public class Main {
 		B.add(e3);
 		D.add(e3);
 		System.out.println(mg);
-
+		// Remove arresta
 		mg.removeEdge(e1);
 		System.out.println(mg);
-
+		// Remove vertice
 		mg.removeVertex(A);
+		System.out.println(mg);
+		// Substitui vertice
+		mg.replaceVertix(B, "F");
+		System.out.println(mg);
+		// Substitui arresta
+		mg.replaceEdge(e3, 66);
 		System.out.println(mg);
 
  	}

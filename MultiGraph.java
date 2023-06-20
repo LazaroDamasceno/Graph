@@ -48,7 +48,7 @@ public class MultiGraph {
 	}
 
 	public void replaceEdge(Edge edge, Object data) {
-		
+		edge.setData(data);
 	}
 
 	public List<Vertex> getVertices() {
