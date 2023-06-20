@@ -18,13 +18,11 @@ public class Main {
 		D.add(e3);
 		System.out.println(mg);
 
-		mg.removeVertex(A);
-		System.out.println(mg);
+		//mg.removeVertex(A);
+		//System.out.println(mg);
 
-		System.out.println(A);
-		System.out.println(B);
-		System.out.println(C);
-		System.out.println(D);
+		mg.removeEdge(e3);
+		System.out.println(mg);
 
  	}
 
