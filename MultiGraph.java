@@ -58,6 +58,13 @@ public class MultiGraph {
 			.contains(true);
 	}
 
+	public List<Vertex> getFinalVertices(Edge edge) {
+		List<Vertex> verticesOfEdge = new ArrayList<>();
+		verticesOfEdge.add(edge.getFirstVertex());
+		verticesOfEdge.add(edge.getSecondVertex());
+		return verticesOfEdge;
+	}
+
 	public List<Edge> getEdgesOf(Vertex vertex) {
 		return vertex.getEdges();
 	}
